@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,13 @@
 		FA7CB9B92629DCE10056558E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7CB9B82629DCE10056558E /* Assets.xcassets */; };
 		FA7CB9BC2629DCE10056558E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7CB9BB2629DCE10056558E /* Preview Assets.xcassets */; };
 		FA7CB9BF2629DCE10056558E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7CB9BD2629DCE10056558E /* LaunchScreen.storyboard */; };
+		FA7CB9C92629DE350056558E /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FA7CB9C82629DE350056558E /* SDWebImageSwiftUI */; };
+		FA7CB9CD2629DE980056558E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA7CB9CC2629DE980056558E /* SwiftyJSON */; };
+		FAE3631C262D2B76009DB16F /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE3631B262D2B76009DB16F /* Sport.swift */; };
+		FAE3631F262D2B8E009DB16F /* SportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE3631E262D2B8E009DB16F /* SportViewModel.swift */; };
+		FAE36322262D2BA9009DB16F /* SportList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE36321262D2BA9009DB16F /* SportList.swift */; };
+		FAE36325262D2BB6009DB16F /* SportDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE36324262D2BB6009DB16F /* SportDetail.swift */; };
+		FAE36328262D2BC0009DB16F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE36327262D2BC0009DB16F /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,11 @@
 		FA7CB9BB2629DCE10056558E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA7CB9BE2629DCE10056558E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA7CB9C02629DCE10056558E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE3631B262D2B76009DB16F /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
+		FAE3631E262D2B8E009DB16F /* SportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportViewModel.swift; sourceTree = "<group>"; };
+		FAE36321262D2BA9009DB16F /* SportList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportList.swift; sourceTree = "<group>"; };
+		FAE36324262D2BB6009DB16F /* SportDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportDetail.swift; sourceTree = "<group>"; };
+		FAE36327262D2BC0009DB16F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7CB9CD2629DE980056558E /* SwiftyJSON in Frameworks */,
+				FA7CB9C92629DE350056558E /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +72,11 @@
 		FA7CB9AE2629DCDE0056558E /* SportAPI */ = {
 			isa = PBXGroup;
 			children = (
+				FAE3631A262D2B5A009DB16F /* Model */,
+				FAE36319262D2B49009DB16F /* ViewModel */,
+				FAE36318262D2B40009DB16F /* View */,
 				FA7CB9AF2629DCDE0056558E /* AppDelegate.swift */,
 				FA7CB9B12629DCDE0056558E /* SceneDelegate.swift */,
-				FA7CB9B32629DCDE0056558E /* ContentView.swift */,
 				FA7CB9B82629DCE10056558E /* Assets.xcassets */,
 				FA7CB9BD2629DCE10056558E /* LaunchScreen.storyboard */,
 				FA7CB9C02629DCE10056558E /* Info.plist */,
@@ -76,6 +92,33 @@
 				FA7CB9BB2629DCE10056558E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAE36318262D2B40009DB16F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA7CB9B32629DCDE0056558E /* ContentView.swift */,
+				FAE36321262D2BA9009DB16F /* SportList.swift */,
+				FAE36324262D2BB6009DB16F /* SportDetail.swift */,
+				FAE36327262D2BC0009DB16F /* Profile.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAE36319262D2B49009DB16F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAE3631E262D2B8E009DB16F /* SportViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAE3631A262D2B5A009DB16F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAE3631B262D2B76009DB16F /* Sport.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +137,10 @@
 			dependencies = (
 			);
 			name = SportAPI;
+			packageProductDependencies = (
+				FA7CB9C82629DE350056558E /* SDWebImageSwiftUI */,
+				FA7CB9CC2629DE980056558E /* SwiftyJSON */,
+			);
 			productName = SportAPI;
 			productReference = FA7CB9AC2629DCDE0056558E /* SportAPI.app */;
 			productType = "com.apple.product-type.application";
@@ -121,6 +168,10 @@
 				Base,
 			);
 			mainGroup = FA7CB9A32629DCDE0056558E;
+			packageReferences = (
+				FA7CB9C72629DE350056558E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				FA7CB9CB2629DE980056558E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = FA7CB9AD2629DCDE0056558E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -148,10 +199,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE3631C262D2B76009DB16F /* Sport.swift in Sources */,
+				FAE36322262D2BA9009DB16F /* SportList.swift in Sources */,
 				FA7CB9B02629DCDE0056558E /* AppDelegate.swift in Sources */,
 				FA7CB9B22629DCDE0056558E /* SceneDelegate.swift in Sources */,
+				FAE3631F262D2B8E009DB16F /* SportViewModel.swift in Sources */,
 				FA7CB9B42629DCDE0056558E /* ContentView.swift in Sources */,
 				FA7CB9B72629DCDE0056558E /* SportAPI.xcdatamodeld in Sources */,
+				FAE36328262D2BC0009DB16F /* Profile.swift in Sources */,
+				FAE36325262D2BB6009DB16F /* SportDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +405,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA7CB9C72629DE350056558E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+		FA7CB9CB2629DE980056558E /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA7CB9C82629DE350056558E /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA7CB9C72629DE350056558E /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		FA7CB9CC2629DE980056558E /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA7CB9CB2629DE980056558E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FA7CB9B52629DCDE0056558E /* SportAPI.xcdatamodeld */ = {
